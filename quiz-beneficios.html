@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Central de Informações sobre Benefícios Sociais</title>
+<style>
+:root{--bg:#f5f7f6;--card:#fff;--tx:#1b2a22;--mu:#5d6b63;--g:#12a150;--gd:#0c7a3a;--y:#f7c600;--b:#1e6fd9;--bd:#dfe6e2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101814;--card:#18241e;--tx:#e8f1ec;--mu:#9bb0a4;--bd:#2a3a31;color-scheme:dark}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:620px;margin:0 auto;padding:16px}
+header{text-align:center;padding:8px 0 12px}header h1{font-size:15px;margin:0;color:var(--gd);letter-spacing:.2px}
+header p{margin:4px 0 0;font-size:13px;color:var(--mu)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:22px;animation:in .3s ease}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h2{font-size:22px;line-height:1.25;margin:0 0 10px}
+.mu{color:var(--mu);font-size:14px}.pill{display:inline-block;background:#fff6c7;color:#6b5600;border-radius:99px;padding:3px 12px;font-size:13px;font-weight:600;margin-bottom:12px}
+.btn{display:block;width:100%;border:0;border-radius:16px;background:var(--g);color:#fff;font:700 17px inherit;font-family:inherit;padding:16px;margin-top:16px;cursor:pointer;text-align:center;text-decoration:none;box-shadow:0 4px 0 var(--gd)}
+.btn:active{transform:translateY(2px);box-shadow:0 2px 0 var(--gd)}
+.btn.s{background:transparent;color:var(--mu);box-shadow:none;border:1px solid var(--bd);font-weight:600;font-size:15px;padding:12px}
+.opt{display:flex;gap:10px;align-items:center;width:100%;text-align:left;background:var(--card);color:var(--tx);border:2px solid var(--bd);border-radius:14px;padding:14px;margin-top:10px;font:600 15px inherit;font-family:inherit;cursor:pointer}
+.opt.on{border-color:var(--g);background:rgba(18,161,80,.1)}
+.opt i{flex:none;width:20px;height:20px;border-radius:50%;border:2px solid var(--bd)}.opt.on i{border-color:var(--g);background:var(--g);box-shadow:inset 0 0 0 3px var(--card)}
+.bar{height:10px;background:var(--bd);border-radius:9px;overflow:hidden;margin:4px 0 14px}.bar b{display:block;height:100%;background:linear-gradient(90deg,var(--g),var(--y));transition:width .35s}
+.nav{display:flex;gap:10px}.nav .btn{margin-top:14px}.nav .s{width:36%}
+.ok{width:64px;height:64px;border-radius:50%;background:var(--g);color:#fff;font-size:34px;display:grid;place-items:center;margin:0 auto 12px;animation:pop .5s}
+@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+.sum{border-left:4px solid var(--b);background:rgba(30,111,217,.08);border-radius:8px;padding:8px 12px;margin:8px 0;font-size:14px}.sum small{display:block;color:var(--mu)}
+.warn{font-size:12.5px;color:var(--mu);border:1px dashed var(--bd);border-radius:10px;padding:10px;margin-top:12px}
+.mod{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--bd);font-size:15px}.mod b{color:var(--g)}
+ul.c{padding-left:0;list-style:none}ul.c li{padding:4px 0}ul.c li:before{content:"✔ ";color:var(--g)}
+.price{font-size:38px;font-weight:800;color:var(--gd);text-align:center}
+footer{font-size:12px;color:var(--mu);text-align:center;padding:16px 4px}
+label{display:block;font-size:13px;font-weight:600;margin-top:12px}input,textarea{width:100%;padding:10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:14px inherit;font-family:inherit}
+textarea{min-height:120px;font-family:ui-monospace,monospace;font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{border-bottom:1px solid var(--bd);padding:5px;text-align:left}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.kp div{background:var(--bg);border-radius:12px;padding:10px;text-align:center}.kp b{font-size:22px;display:block}
+.sc{overflow-x:auto}.opt{transition:transform .12s,border-color .12s}.opt:active{transform:scale(.98)}.opt .ic{flex:none;font-size:24px;width:32px;text-align:center}.tr{text-align:center;padding:34px 22px}.tr .big{font-size:56px;animation:pop .5s}.tr h2{margin-top:10px}.card+.card{margin-top:14px}details{border-bottom:1px solid var(--bd);padding:10px 0}summary{font-weight:600;cursor:pointer}details p{margin:8px 0 0;color:var(--mu);font-size:14px}.col{display:grid;gap:10px}.no li:before{content:"✖ ";color:#c0392b}.mock{border:1px solid var(--bd);border-radius:14px;padding:14px;background:var(--bg);font-size:14px}.mock .ln{height:8px;border-radius:6px;background:var(--bd);margin:7px 0}.mock .ck{display:flex;gap:8px;margin:6px 0}.mock .ck:before{content:"☐";color:var(--g)}.pg{border-left:4px solid var(--g);background:rgba(18,161,80,.08);border-radius:8px;padding:8px 12px;margin-top:8px;font-size:14px}
+</style></head><body><div class="w"><header><h1>Central de Informações sobre Benefícios Sociais</h1><p id="sub"></p></header><main id="app"></main>
+<footer>Guia educacional independente, sem vínculo com órgãos governamentais. Consultas e solicitações de benefícios são feitas exclusivamente pelos canais oficiais. Este guia não vende acesso a benefícios. <a href="#admin" style="color:inherit">Admin</a></footer></div>
+<script>
+var D={sub:"Responda algumas perguntas e encontre informações organizadas sobre os programas sociais.",
+intro:"Você sabe quais benefícios sociais existem e como consultar as informações atualizadas?",
+introTxt:"Descubra quais programas fazem parte do sistema de benefícios sociais, entenda as regras e saiba onde encontrar informações oficiais.",
+head:"Entenda os principais programas sociais, organize suas dúvidas e descubra onde consultar informações confiáveis sobre regras, calendários e procedimentos.",
+subh:"Um material digital organizado para ajudar você a compreender programas sociais, calendários, critérios, adicionais e procedimentos de consulta.",
+price:"19,90",checkout:"",pixel:"",ga:"",
+qs:[{t:"Qual benefício ou programa você gostaria de entender melhor?",o:["Bolsa Família","Gás do Povo","BPC/LOAS","Tarifa Social de Energia","Quero conhecer todos os benefícios"]},
+{t:"Qual é sua situação atualmente?",o:["Já recebo um benefício e quero entender melhor as regras.","Quero saber quais programas existem.","Meu benefício está bloqueado ou suspenso.","Quero entender se posso me enquadrar nos critérios de algum programa."]},
+{t:"O que você mais gostaria de descobrir?",o:["Valores e adicionais dos benefícios.","Calendário e datas de pagamento.","Regras para participar dos programas.","Como consultar informações nos canais oficiais.","Como resolver pendências e bloqueios."]},
+{t:"Como você prefere receber essas informações?",o:["Em um guia completo e organizado.","Em explicações simples, passo a passo.","Em listas e checklists práticos.","Quero ter acesso a todas essas informações."]}]};
+var C=JSON.parse(JSON.stringify(D)),A=[],step=0,db=null,usr=null,app=document.getElementById("app");
+var MODS=["Comece por aqui: como usar o guia, canais oficiais e cuidados básicos.","Bolsa Família: consulta, mensagens, efeitos de descumprimento e recurso.","Gás do Povo: consulta do vale, uso na revenda e a quem recorrer.","BPC/LOAS: diferença para aposentadoria, requisitos gerais e acompanhamento do pedido.","Tarifa Social de Energia: como funciona o desconto e o que conferir na conta.","Cadastro Único: checklist de documentos e preparação para o atendimento.","Bloqueios, suspensões e pendências: como interpretar e qual canal procurar.","Guia Antigolpes: sinais de fraude e canais seguros.","Glossário: NIS, CadÚnico, averiguação, bloqueio, suspensão e outros termos.","Diretório de canais oficiais: links, aplicativos e telefones."];
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function ls(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k));localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+var sv=ls("qz");if(sv&&sv.A){A=sv.A;step=sv.step||0}
+function save(){ls("qz",{A:A,step:step})}
+/* tracking */
+var ready=0,SENT={};
+function track(n,p){p=p||{};if(ready){try{if(window.fbq){if(n==="PageView"||n==="InitiateCheckout")fbq("track",n);else fbq("trackCustom",n,p)}}catch(e){}
+try{if(window.gtag)gtag("event",n,p)}catch(e){}}
+if(db){try{db.collection("ev").add({type:n,q:p.q==null?null:p.q,a:p.a==null?null:p.a,ts:Date.now()}).catch(function(){})}catch(e){}}}
+function loadPix(){if(C.pixel&&/^\d+$/.test(C.pixel)&&!window.fbq){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",C.pixel)}
+if(C.ga&&/^G-[A-Z0-9]+$/.test(C.ga)&&!window.gtag){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config",C.ga);var g=document.createElement("script");g.src="https://www.googletagmanager.com/gtag/js?id="+C.ga;g.async=1;document.head.appendChild(g)}}
+/* views */
+var IC=[[/bolsa/i,"👨‍👩‍👧"],[/g[aá]s/i,"🔥"],[/bpc|loas/i,"🤝"],[/tarifa|energia/i,"💡"],[/todos os benef/i,"📋"],[/bloquead|suspens|pend[eê]ncias/i,"🔒"],[/j[aá] recebo/i,"✅"],[/quais programas/i,"🔎"],[/enquadrar/i,"📝"],[/valores/i,"📊"],[/calend[aá]rio/i,"📅"],[/regras/i,"📜"],[/consultar/i,"📱"],[/guia completo/i,"📘"],[/passo a passo/i,"👣"],[/checklists/i,"☑️"],[/todas essas/i,"⭐"]];
+function ico(t){for(var k=0;k<IC.length;k++)if(IC[k][0].test(t))return IC[k][1];return"•"}
+var PI={"Bolsa Família":["👨‍👩‍👧","#12a150"],"Gás do Povo":["🔥","#f08a00"],"BPC/LOAS":["🤝","#1e6fd9"],"Tarifa Social de Energia":["💡","#d9a900"]};
+function trans(i,next){clearTimeout(window.tm);
+if(i==0){app.innerHTML='<div class="card tr"><div class="big">'+ico(A[0])+'</div><h2>Ótima escolha!</h2><p class="mu">Vamos organizar as informações sobre <b>'+esc(A[0])+'</b>.</p></div>';window.tm=setTimeout(function(){location.hash="quiz/"+next},1400)}
+else{app.innerHTML='<div class="card tr"><div class="big">💡</div><h2>Você sabia?</h2><p>No Gás do Povo não existe inscrição nem pedido: a seleção é automática, a partir do Cadastro Único. Desconfie de quem cobra para “inscrever” você.</p><p class="mu" style="font-size:12px">Fonte: MDS, Informe Gás do Povo nº 04.</p><button class="btn" id="ct">CONTINUAR</button></div>';document.getElementById("ct").onclick=function(){location.hash="quiz/"+next}}}
+var PROG={"Bolsa Família":"Conteúdo sobre regras, adicionais e calendário.","Gás do Povo":"Conteúdo sobre funcionamento, critérios e consulta.","BPC/LOAS":"Conteúdo sobre critérios gerais e procedimentos.","Tarifa Social de Energia":"Conteúdo sobre descontos e consulta."};
+function interest(){var k=Object.keys(PROG),one=PROG[A[0]],l=one?[A[0]]:k,h='<h3 style="text-align:left;margin:16px 0 4px">Seu material de interesse</h3>';
+l.forEach(function(n){var p=PI[n]||["","#12a150"];h+='<div class="pg" style="border-color:'+p[1]+'"><b>'+p[0]+' '+esc(n)+'</b><br>'+esc(PROG[n])+'</div>'});
+if(/bloquead|suspens/i.test(A[1]||""))h+='<div class="pg"><b>Bloqueios e suspensões</b><br>Conteúdo sobre o que verificar e quais são os próximos passos.</div>';
+if(!one)h+='<div class="mu" style="text-align:left;margin-top:6px">Você escolheu conhecer todos os benefícios, então o guia cobre os quatro programas.</div>';
+return h}
+function home(){track("PageView",{page:"quiz"});app.innerHTML='<div class="card"><span class="pill">⏱ Leva menos de 1 minuto.</span><h2>'+esc(C.intro)+'</h2><p class="mu">'+esc(C.introTxt)+'</p><button class="btn" id="go">QUERO DESCOBRIR</button></div>';
+document.getElementById("go").onclick=function(){track("QuizStart");A=[];step=0;save();location.hash="quiz/1"}}
+function quiz(n){var qs=C.qs,i=n-1;if(i<0||i>=qs.length){location.hash="";return}
+var q=qs[i],pc=Math.round(i/qs.length*100);
+app.innerHTML='<div class="card"><div class="mu">Pergunta '+n+' de '+qs.length+' · '+pc+'%</div><div class="bar"><b style="width:'+pc+'%"></b></div><h2>'+esc(q.t)+'</h2><div id="os"></div><div class="nav">'+(i?'<button class="btn s" id="bk">← Voltar</button>':'')+'<button class="btn" id="nx">'+(i==qs.length-1?"Concluir":"Avançar →")+'</button></div><div class="mu" id="er" style="color:#c0392b;margin-top:8px"></div></div>';
+var os=document.getElementById("os");q.o.forEach(function(o){var b=document.createElement("button");b.className="opt"+(A[i]===o?" on":"");b.innerHTML="<i></i><span class=\"ic\">"+ico(o)+"</span><span>"+esc(o)+"</span>";b.onclick=function(){A[i]=o;save();[].forEach.call(os.children,function(x){x.classList.remove("on")});b.classList.add("on");document.getElementById("er").textContent=""};os.appendChild(b)});
+if(i)document.getElementById("bk").onclick=function(){location.hash="quiz/"+i};
+document.getElementById("nx").onclick=function(){if(!A[i]){document.getElementById("er").textContent="Selecione uma resposta para continuar.";return}
+if(!SENT[i]){SENT[i]=1;track("QuizQuestionAnswered",{q:i,a:A[i]})}if(i==qs.length-1){track("QuizComplete");location.hash="resultado"}else if(i<2)trans(i,n+1);else location.hash="quiz/"+(n+1)}}
+function result(){if(A.length<C.qs.length){location.hash="quiz/"+(Math.max(A.filter(Boolean).length,0)+1);return}
+app.innerHTML='<div class="card" style="text-align:center"><div class="ok">'+(PI[A[0]]?PI[A[0]][0]:"✓")+'</div><h2>Suas respostas foram registradas!</h2><p class="mu">Com base nas suas respostas, organizamos os assuntos que você deseja entender para apresentar um material informativo mais relevante.</p><div style="text-align:left"><div class="sum"><small>Programa de maior interesse</small>'+ico(A[0])+' '+esc(A[0])+'</div><div class="sum"><small>Principal dúvida selecionada</small>'+ico(A[2])+' '+esc(A[2])+'</div><div class="sum"><small>Tipo de informação desejada</small>'+ico(A[3])+' '+esc(A[3])+'</div></div>'+interest()+'<div class="warn">Esta é uma organização baseada nas suas respostas. Não representa consulta oficial, análise de CPF, confirmação de elegibilidade ou aprovação de benefício.</div><button class="btn" id="vg">VER GUIA COMPLETO</button></div>';
+document.getElementById("vg").onclick=function(){location.hash="vendas"}}
+function sales(){track("SalesPageView");var ck=/^https?:\/\//.test(C.checkout);
+function cta(){return'<a class="btn buy" href="'+(ck?esc(C.checkout):"#vendas")+'" target="_blank" rel="noopener">QUERO ACESSAR O GUIA</a>'}
+var faq=[["O guia dá acesso a algum benefício?","Não. É um material informativo. Consultas e solicitações de benefícios são feitas somente nos canais oficiais."],["O guia consulta meu CPF ou diz se fui aprovado?","Não. Não há consulta de CPF, análise de elegibilidade nem confirmação de aprovação."],["As regras e os telefones podem mudar?","Sim. Cada módulo indica a data em que as informações foram conferidas e leva você às fontes oficiais para confirmar o que está valendo."],["Preciso informar dados pessoais no quiz?","Não. O quiz não pede CPF, senha, dados bancários nem documentos."],["Como recebo o material?","O formato e a forma de acesso são informados na página de pagamento, antes da compra."],["O guia tem vínculo com o governo?","Não. É um material educacional independente."]];
+var ck1=["Conferir no aplicativo Meu Social ou no portal do programa se há vale disponível e qual a validade.","Escolher uma revenda credenciada e ligar para saber horário e taxa de entrega.","Ter o botijão vazio para a troca.","Decidir a forma de uso: cartão (Bolsa Família com chip ou débito CAIXA) ou CPF com código por SMS.","Confirmar o celular cadastrado na CAIXA, se for usar o código por SMS.","Se algo der errado, usar o canal certo: 121 (regras), SAC CAIXA (uso do vale) ou ANP (irregularidade na revenda)."];
+app.innerHTML='<div class="card">'+(A[0]?'<span class="pill">Você escolheu: '+esc(A[0])+'</span>':'<span class="pill">Guia digital independente</span>')+'<h2>'+esc(C.head)+'</h2><p class="mu">'+esc(C.subh)+'</p>'+cta()+'</div>'
++'<div class="card"><h3>O problema</h3><p>Muita gente tem dúvidas sobre programas sociais: quais existem, quais são as regras e onde consultar. Cada programa tem seus próprios canais, e as informações ficam espalhadas.</p><h3>Por que é difícil achar essas informações</h3><ul class="c"><li>Cada programa tem canais e procedimentos próprios.</li><li>Aplicativos, sites e telefones diferentes para cada assunto.</li><li>Regras e calendários mudam, e a linguagem nem sempre é simples.</li><li>Mensagens falsas e links de golpe imitam os canais oficiais.</li></ul></div>'
++'<div class="card"><h3>O Guia Completo dos Benefícios Sociais</h3><p class="mu">Um manual de consulta e ação: onde entrar, o que procurar, o que separar antes do atendimento e a quem recorrer quando há um problema.</p>'+MODS.map(function(m,i){return'<div class="mod"><b>'+(i+1)+'</b><span>'+esc(m)+'</span></div>'}).join("")+'</div>'
++'<div class="card"><span class="pill">Amostra do guia · Módulo 3 · Gás do Povo</span><h3>Checklist antes de procurar uma revenda</h3><div class="mock">'+ck1.map(function(t){return'<div class="ck">'+esc(t)+'</div>'}).join("")+'<div class="mu" style="font-size:12px;margin-top:8px">Trecho baseado em informe do MDS. No guia, cada item traz a fonte oficial e a data de conferência.</div></div></div>'
++'<div class="card"><h3>Destaque: Guia Antigolpes</h3><p class="mu">Para você não cair em mensagens falsas sobre benefícios.</p><ul class="c"><li>Não informe senha do gov.br por mensagem.</li><li>Não pague para ninguém liberar, antecipar ou inscrever você.</li><li>Não clique em links que prometem consulta ou aprovação.</li></ul></div>'
++'<div class="card"><h3>O que está incluído</h3><ul class="c"><li>Manual com 10 módulos, em linguagem simples.</li><li>Kit de checklists: Cadastro Único, consultas e pendências.</li><li>Guia Antigolpes.</li><li>Diretório de canais oficiais, com links e telefones.</li></ul>'
++'<div class="col"><div><h3>Para quem é</h3><ul class="c"><li>Quem quer entender como os programas funcionam.</li><li>Quem quer organizar dúvidas sobre regras e consultas.</li><li>Quem quer saber onde consultar informações oficiais.</li></ul></div><div><h3>Para quem não é</h3><ul class="c no"><li>Quem procura liberar, solicitar ou garantir benefício.</li><li>Quem espera consulta de CPF ou resultado de aprovação.</li><li>Quem busca atendimento oficial do governo.</li></ul></div></div></div>'
++'<div class="card"><div class="price">R$ '+esc(C.price)+'</div><p class="mu" style="text-align:center">Material digital informativo.</p>'+cta()+'</div>'
++'<div class="card"><h3>Perguntas frequentes</h3>'+faq.map(function(f){return'<details><summary>'+esc(f[0])+'</summary><p>'+esc(f[1])+'</p></details>'}).join("")+'</div>'
++'<div class="warn">Independência: este guia é um produto educacional independente, sem vínculo com órgãos governamentais. Não vendemos acesso a benefícios, não consultamos CPF e não garantimos aprovação, valores ou recebimento. Consultas e solicitações são feitas pelos canais oficiais.</div>';
+[].forEach.call(app.querySelectorAll(".buy"),function(b){b.onclick=function(e){track("InitiateCheckout");if(!ck){e.preventDefault();alert("Link de checkout ainda não configurado.")}}})}
+/* admin */
+function fld(k,l){return'<label>'+l+'<input data-k="'+k+'" value="'+esc(C[k])+'"></label>'}
+function admin(){var can=usr&&usr.canEdit&&usr.canEdit();
+if(!can){app.innerHTML='<div class="card"><h2>Painel administrativo</h2><p class="mu">Acesso restrito. Entre com a conta do proprietário do artefato no claude.ai para editar configurações e ver métricas.</p><a class="btn s" href="#">Voltar ao quiz</a></div>';return}
+app.innerHTML='<div class="card"><h2>Painel administrativo</h2><div id="st" class="mu">Carregando métricas…</div><h3>Configurações</h3>'+fld("sub","Subtítulo do topo")+fld("intro","Título da tela inicial")+fld("introTxt","Texto da tela inicial")+fld("head","Headline da página de vendas")+fld("subh","Subheadline")+fld("price","Preço (ex.: 19,90)")+fld("checkout","Link do checkout (https://…)")+fld("pixel","ID do Meta Pixel")+fld("ga","ID do GA4 (G-XXXX)")+'<label>Perguntas e respostas (JSON)<textarea id="qj">'+esc(JSON.stringify(C.qs,null,1))+'</textarea></label><button class="btn" id="sv">SALVAR</button><button class="btn s" id="csv">Exportar CSV agregado</button><div id="msg" class="mu"></div></div>';
+document.getElementById("sv").onclick=function(){var n=JSON.parse(JSON.stringify(C));[].forEach.call(app.querySelectorAll("[data-k]"),function(e){n[e.dataset.k]=e.value.trim()});
+try{n.qs=JSON.parse(document.getElementById("qj").value)}catch(e){msg("JSON de perguntas inválido.");return}
+if(!db){msg("Banco de dados indisponível.");return}db.doc("config/main").set(n).then(function(){C=n;msg("Salvo!")}).catch(function(){msg("Erro ao salvar.")})};
+function msg(t){document.getElementById("msg").textContent=t}
+if(!db){document.getElementById("st").textContent="Métricas indisponíveis (sem acesso ao banco).";return}
+db.collection("ev").get().then(function(s){var T={},Q={};s.docs.forEach(function(d){var v=d.data();T[v.type]=(T[v.type]||0)+1;if(v.type==="QuizQuestionAnswered"){var k=v.q+"|"+v.a;Q[k]=(Q[k]||0)+1}});
+var rows=Object.keys(Q).sort().map(function(k){var p=k.split("|");return[+p[0]+1,p.slice(1).join("|"),Q[k]]});
+document.getElementById("st").innerHTML='<div class="kp"><div><b>'+(T.QuizStart||0)+'</b>iniciaram</div><div><b>'+(T.QuizComplete||0)+'</b>concluíram</div><div><b>'+(T.InitiateCheckout||0)+'</b>cliques na venda</div></div><h3>Respostas por pergunta</h3><div class="sc"><table><tr><th>P</th><th>Resposta</th><th>Qtd</th></tr>'+rows.map(function(r){return"<tr><td>"+r[0]+"</td><td>"+esc(r[1])+"</td><td>"+r[2]+"</td></tr>"}).join("")+"</table></div>";
+document.getElementById("csv").onclick=function(){var t="metrica,pergunta,resposta,quantidade\n";Object.keys(T).forEach(function(k){t+=k+",,,"+T[k]+"\n"});rows.forEach(function(r){t+='QuizQuestionAnswered,'+r[0]+',"'+r[1].replace(/"/g,'""')+'",'+r[2]+"\n"});
+var bl=new Blob([t],{type:"text/csv"});(window.claude?claude.use("downloads"):Promise.resolve(null)).then(function(d){if(d)return d.save({filename:"quiz-agregado.csv",data:bl});var a=document.createElement("a");a.href=URL.createObjectURL(bl);a.download="quiz-agregado.csv";a.click()}).catch(function(){})}}).catch(function(){document.getElementById("st").textContent="Não foi possível ler as métricas."})}
+/* router */
+function route(){clearTimeout(window.tm);var h=location.hash.replace("#","");document.getElementById("sub").textContent=C.sub;window.scrollTo(0,0);
+if(h.indexOf("quiz/")==0)quiz(parseInt(h.slice(5))||1);else if(h==="resultado")result();else if(h==="vendas")sales();else if(h==="admin")admin();else home()}
+window.addEventListener("hashchange",route);var started=0;function start(){if(started)return;started=1;ready=1;loadPix();route()}setTimeout(start,4000);
+(async function(){try{if(!window.claude)return;usr=await claude.use("user");db=await claude.use("db");
+if(db){try{var s=await db.doc("config/main").get();if(s.exists){C=Object.assign({},D,s.data())}}catch(e){}}
+}catch(e){}start()})();
+</script></body></html>
